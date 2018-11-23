@@ -1,0 +1,32 @@
+{
+    "name": "monim67/laravel-user-image-croppie",
+    "description": "Laravel package to Crop and Upload Square/Circular User Profile Picture",
+    "keywords": ["laravel","avatar","profile picture","image upload"],
+    "homepage": "https://github.com/monim67/laravel-user-image-croppie",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Munim Munna",
+            "email": "6266677+monim67@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^5.5",
+        "intervention/image": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monim67\\LaravelUserImageCroppie\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Monim67\\LaravelUserImageCroppie\\ServiceProvider"
+            ],
+            "aliases": {
+                "LUICroppie": "Monim67\\LaravelUserImageCroppie\\LaravelUserImageCroppie"
+            }
+        }
+    }
+}
