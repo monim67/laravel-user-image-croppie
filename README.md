@@ -6,6 +6,8 @@ An avatar controller is included to handle image upload which emits an event aft
 
 ![Steps of image upload - laravel-user-image-croppie][cover-image]
 
+![version of laravel-user-image-croppie][packagist-version-badge]
+
 ## Features
 
 - Resize/Rotate/Crop image before upload.
@@ -104,3 +106,6 @@ images to upload.
 
 
 [cover-image]: https://raw.githubusercontent.com/monim67/laravel-user-image-croppie/39c06c651176b9cddf93fdb4ff650e528bb83520/.github/images/lui-croppie-cover.png
+
+[packagist-version-badge]: https://img.shields.io/packagist/v/monim67/laravel-user-image-croppie.svg?style=flat-square
+
