@@ -5,7 +5,7 @@ namespace Monim67\LaravelUserImageCroppie\Http\Controllers;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use TestHook\Http\Handlers\Image as ImageHandler;
+use Monim67\LaravelUserImageCroppie\Http\Handlers\Image as ImageHandler;
 use Monim67\LaravelUserImageCroppie\Events\AvatarUpdate;
 
 class AvatarController extends Controller
