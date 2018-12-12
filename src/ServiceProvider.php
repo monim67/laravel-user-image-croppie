@@ -13,6 +13,12 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'lui-croppie');
+
+        $this->publishes([
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/lui-croppie'),
+        ], 'lang');
+
         $this->publishes([
             __DIR__.'/../config/lui-croppie.php' => config_path('lui-croppie.php'),
         ], 'config');

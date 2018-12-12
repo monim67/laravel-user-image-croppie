@@ -3,10 +3,8 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Model config
+    | General config
     |--------------------------------------------------------------------------
-    |
-    | Here you can specify voyager user configs
     |
     */
 
@@ -22,12 +20,14 @@ return [
     | Image Config
     |--------------------------------------------------------------------------
     |
-    | Here you can specify attributes related to your application file system
+    | Here you can specify image crop parameters
+    | image.size => Size of image to crop and store 
+    | image.boundary => Size of croppie HTML canvas
     |
     */
 
     'image' => [
-        'type' => 'square',
+        'type' => 'square', /* square/circle */
         'quality' => 75,
         'size' => [
             'width' => 160,
@@ -44,7 +44,7 @@ return [
     | Storage Config
     |--------------------------------------------------------------------------
     |
-    | Here you can specify attributes related to your application file system
+    | Here you can specify storage and directory to store images 
     |
     */
 
@@ -57,27 +57,12 @@ return [
     | Action after a successful upload
     |--------------------------------------------------------------------------
     |
-    | accepts full URL eg http://...
-    | you can specify it with a route eg route('route-name')
-    | set it to null for no redirection
+    | Accepts full URL eg http://...
+    | You can specify it with a route eg route('route-name')
+    | Set it to null for no redirection
     |
     */
 
     'redirect_on_success' => null,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Template Config
-    |--------------------------------------------------------------------------
-    |
-    | Here you can specify attributes related to your application file system
-    |
-    */
-
-    'file_input_label' => 'Select Image to Upload',
-    'croppie_help_text' => 'Use the slider to zoom the image, drag/swipe the image to adjust.',
-    'rotate_left_button_text' => 'Rotate Left',
-    'rotate_right_button_text' => 'Rotate Left',
-    'upload_button_text' => 'Crop and Upload',
-    'success_message_text' => 'Avatar image uploaded successfully.',
 ];

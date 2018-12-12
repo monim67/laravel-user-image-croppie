@@ -5,8 +5,10 @@ namespace Monim67\LaravelUserImageCroppie\Http\Controllers;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Monim67\LaravelUserImageCroppie\Http\Handlers\Image as ImageHandler;
 use Monim67\LaravelUserImageCroppie\Events\AvatarUpdate;
+
 
 class AvatarController extends Controller
 {
@@ -27,9 +29,9 @@ class AvatarController extends Controller
 
         if(!$request->hasFile($form_field)){
             return response()->json([
-                "message" => "The given data was invalid.",
+                "message" => __('lui-croppie::form.invalid_file_error_message'),
                 "errors" => [
-                    $form_field => ["The file format is not acceptable"],
+                    $form_field => [__('lui-croppie::form.invalid_file_error_message')],
                 ]
             ], 422);
         }
@@ -49,9 +51,13 @@ class AvatarController extends Controller
 
             return response()->json([
                 'success' => True,
-                'message' => config('lui-croppie.success_message_text'),
                 'uploaded_image_url' => asset('storage/' . $file_path),
                 'redirect_url' => config('lui-croppie.redirect_on_success'),
+                'message' => __('lui-croppie::form.success_message_text', [
+                    'attribute' => $form_field,
+                    'ATTRIBUTE' => Str::upper($form_field),
+                    'Attribute' => Str::title($form_field),
+                ]),
             ]);
         }
     }

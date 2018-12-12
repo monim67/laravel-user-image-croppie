@@ -18,6 +18,7 @@ An avatar controller is included to handle image upload which emits an event aft
 - Includes optional migration that adds avatar column to user table.
 - Integration to laravel with just few simple steps.
 - Fully customizable through editing the config file.
+- Includes localization support.
 - Can be used along with laravel voyager admin panel.
 
 ## Getting Started
@@ -39,7 +40,7 @@ Add the following to your routes in `web.php` file.
 Route::prefix('avatar')->middleware('auth:web')->group(function(){LUICroppie::routes();});
 ```
 
-This will add edit and update routes for user image. You can use any prefix of your choice.
+This will include edit and update routes for user image. You can use any prefix of your choice.
 
 If you only want the update route, use the following instead.
 
@@ -83,6 +84,8 @@ write controller actions. Run the development server and visit
 You can edit the config file `lui-croppie.php` in your config directory to customize the options
 to your needs.
 
+__NOTE:__ For circular profile picture set image type to `circle`.
+
 
 ## Other Form Layouts 
 
@@ -94,10 +97,19 @@ your existing pages ie the profile page or account settings page. Then include o
 route to your `web.php` and include the password-update form in the page of your choice.
 
 
+## Localization
+
+If you want to customize package language files publish them to modify. Files will be published to
+`resources\lang\vendor\lui-croppie` directory. You can create lang files for other languages there.
+
+    php artisan vendor:publish --provider="Monim67\LaravelUserImageCroppie\ServiceProvider" --tag=lang
+
+
 ## User Image Update Event
 
 When user uploads an image `Monim67\LaravelUserImageCroppie\Events\AvatarUpdate` event
 is emitted, you can subscribe to the event or add listeners to it.
+
 
 ## Acknowledgments
 

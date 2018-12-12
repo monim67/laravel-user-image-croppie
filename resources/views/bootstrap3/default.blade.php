@@ -7,25 +7,25 @@
   </div>
 
   <div class="form-group">
-    <label class="control-label">{{ config('lui-croppie.file_input_label') }}</label>
+    <label class="control-label">{{ __('lui-croppie::form.file_input_label') }}</label>
     <input type="file" name="{{ config('lui-croppie.form_input_name') }}" value="Choose an image" accept="image/*" />
     <div class="help-block"></div>
   </div>
 
   <div class="upload-demo-wrap lui-croppie-cropping-visible">
     <div data-lui-croppie-viewport></div>
-    <div class="help-block text-center">{{ config('lui-croppie.croppie_help_text') }}</div>
+    <div class="help-block text-center">{{ __('lui-croppie::form.croppie_help_text') }}</div>
     <button type="submit" class="btn btn-primary pull-right">
       <i class="fa fa-upload margin-r-5"></i>
-      {{ config('lui-croppie.upload_button_text') }}
+      {{ __('lui-croppie::form.upload_button_text') }}
     </button>
     <button type="button" class="btn btn-primary margin-r-5" data-lui-croppie-rotate-right>
       <i class="fa fa-rotate-left margin-r-5"></i>
-      Rotate Left
+      {{ __('lui-croppie::form.rotate_left_button_text') }}
     </button>
     <button type="button" class="btn btn-primary margin-r-5" data-lui-croppie-rotate-left>
       <i class="fa fa-rotate-right margin-r-5"></i>
-      Rotate Right
+      {{ __('lui-croppie::form.rotate_right_button_text') }}
     </button>
   </div>
 
