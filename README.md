@@ -7,6 +7,8 @@ An avatar controller is included to handle image upload which emits an event aft
 ![Steps of image upload - laravel-user-image-croppie][cover-image]
 
 ![version of laravel-user-image-croppie][packagist-version-badge]
+![licence of laravel-user-image-croppie][packagist-licence-badge]
+
 
 ## Features
 
@@ -121,3 +123,4 @@ images to upload.
 
 [packagist-version-badge]: https://img.shields.io/packagist/v/monim67/laravel-user-image-croppie.svg?style=flat-square
 
+[packagist-licence-badge]: https://img.shields.io/packagist/l/monim67/laravel-user-image-croppie.svg?style=flat-square
