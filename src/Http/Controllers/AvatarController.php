@@ -35,8 +35,8 @@ class AvatarController extends Controller
                 ]
             ], 422);
         }
-
-        $file_path = (new ImageHandler())->handle($request->file($form_field));
+    
+        $file_path =  str_replace('\\', '/', (new ImageHandler())->handle($request->file($form_field))); 
 
         if($file_path){
 
